@@ -39,3 +39,14 @@
     </body>
     
 </html>
+
+<script>
+    const slide_sound = document.createElement ("audio")
+    slide_sound.src = "sounds/rail_slide.mp3"
+    
+    const circle_element = document.getElementById ("circle_id")
+    circle_element.onpointerdown = () => {
+        circle_element.src = "img/hex.png"
+        slide_sound.play ()
+        setTimeout (() => { circle_element.src = "img/cir.png" }, 2000)
+    }
