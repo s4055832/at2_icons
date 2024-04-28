@@ -41,12 +41,24 @@
 </html>
 
 <script>
+    const weather_sound = document.createElement ("audio")
+    weather_sound.src = "sounds/weather.mp3"
+    
+    const weather = document.getElementById ("weather")
+    circle_element.onpointerdown = () => {
+        circle_element.src = "icons/9-02.jpg"
+        weather_sound.play ()
+    }
+</script>
+    
+ <script>
     const slide_sound = document.createElement ("audio")
-    slide_sound.src = "sounds/weather.mp3"
+    slide_sound.src = "sounds/meditate.mp3"
     
     const circle_element = document.getElementById ("circle_id")
     circle_element.onpointerdown = () => {
-        circle_element.src = "icons/9-02.jpg"
+        circle_element.src = "icons/9-03.jpg"
         slide_sound.play ()
-        setTimeout (() => { circle_element.src = "icons/9-03.jpg" }, 2000)
+        setTimeout (() => { circle_element.src = "icons/9-01.jpg" }, 2000)
     }
+</script>
