@@ -24,21 +24,21 @@
     </script>
 
         <div class="row">
-            <div class="image-container"><img id="hide" src="icons/9-02.jpg" height="200" width="200"/></div>
-            <div class="image-container"><img id="glacier"src="icons/9-03.jpg" height="200" width="200"/></div>
-            <div class="image-container"><img id="meditate"src="icons/9-01.jpg" height="200" width="200"/></div>
+            <div class="image-container"><img id="hide" src="icons/9-02.jpg" height="200" width="200"onclick="playsound('sounds/hide.mp3','9','9-08')"/></div>
+            <div class="image-container"><img id="glacier"src="icons/9-03.jpg" height="200" width="200"onclick="playsound('sounds/glacier.mp3','9','9-08')"/></div>
+            <div class="image-container"><img id="meditate"src="icons/9-01.jpg" height="200" width="200"onclick="playsound('sounds/meditate.mp3','9','9-08')"/></div>
         </div>
 
         <div class="row">
-            <div class="image-container"><img id="weather"src="icons/9-08.jpg" height="200" width="200"/></div>
-            <div class="image-container"><img id="star"src="icons/9-06.jpg" height="200" width="200"/></div>
-            <div class="image-container"><img id="boardgame"src="icons/9-07.jpg" height="200" width="200"/></div>
+            <div class="image-container"><img id="weather"src="icons/9-08.jpg" height="200" width="200"onclick="playsound('sounds/weather.mp3','9','9-08')"/></div>
+            <div class="image-container"><img id="star"src="icons/9-06.jpg" height="200" width="200"onclick="playsound('sounds/star.mp3','9','9-08')"/></div>
+            <div class="image-container"><img id="boardgame"src="icons/9-07.jpg" height="200" width="200"onclick="playsound('sounds/boardgame.mp3','9','9-08')"/></div>
             </div>
 
         <div class="row">
-            <div class="image-container"><img id="bird"src="icons/9-04.jpg" height="200" width="200"/></div>
-            <div class="image-container"><img id="virtual"src="icons/9-05.jpg" height="200" width="200"/></div>
-            <div class="image-container"><img src="icons/9-09.jpg" height="200" width="200" onclick="playSound('sounds/whitenoise.mp3')"/></div>
+            <div class="image-container"><img id="bird"src="icons/9-04.jpg" height="200" width="200"onclick="playsound('sounds/bird.mp3','9','9-08')"/></div>
+            <div class="image-container"><img id="virtual"src="icons/9-05.jpg" height="200" width="200" onclick="playsound('sounds/virtual.mp3','9','9-08')"/></div>
+            <div class="image-container"><id="9" img src="icons/9-09.jpg" height="200" width="200" onclick="playSound('sounds/whitenoise.mp3','9','9-08')"/></div>
         </div>
         
     </body>
@@ -52,94 +52,35 @@
 
    
 </script>
-const music = document.getElementById("music")
-<script>
-    const hide_sound = document.createElement ("audio")
-    hide_sound.src = "sounds/hide.mp3"
-    
-    const music = document.getElementById ("music")
-    document.getElementById("music").onpointerdown = () => {
-        document.getElementById("music").src = "icons/9-02.jpg"
-    }
-    document.getElementById("music").onpointerdown = () => {
-    hide_sound.play
-    }
 
-    const glacier_sound = document.createElement ("audio")
-    glacier_sound.src = "sounds/glacier.mp3"
-    
-    const glacier = document.getElementById ("glacier")
-    glacier.onpointerdown = () => {
-        glacier.src = "icons/9-03.jpg"
-        glacier_sound.play ()
-    }
-
-    const meditate_sound = document.createElement ("audio")
-    meditate_sound.src = "sounds/meditate.mp3"
-    
-    const meditate = document.getElementById ("meditate")
-    meditate.onpointerdown = () => {
-        meditate.src = "icons/9-01.jpg"
-        meditate_sound.play ()
-    }
-
-    const weather_sound = document.createElement ("audio")
-    weather_sound.src = "sounds/weather.mp3"
-    
-    const weather = document.getElementById ("weather")
-    weather.onpointerdown = () => {
-        weather.src = "icons/9-08.jpg"
-        weather_sound.play ()
-    }
-
-    const star_sound = document.createElement ("audio")
-    star_sound.src = "sounds/star.mp3"
-    
-    const star = document.getElementById ("star")
-    star.onpointerdown = () => {
-        star.src = "icons/9-06.jpg"
-        star_sound.play ()
-    }
-
-    const boardgame_sound = document.createElement ("audio")
-   boardgame_sound.src = "sounds/boardgame.mp3"
-    
-    const boardgame = document.getElementById ("boardgame")
-    boardgame.onpointerdown = () => {
-       boardgame.src = "icons/9-07.jpg"
-       boardgame_sound.play ()
-    }
-
-    const bird_sound = document.createElement ("audio")
-    bird_sound.src = "sounds/bird.mp3"
-    
-    const bird = document.getElementById ("bird")
-    bird.onpointerdown = () => {
-        bird.src = "icons/9-04.jpg"
-        bird_sound.play ()
-    }
-
-    const virtual_sound = document.createElement ("audio")
-    virtual_sound.src = "sounds/virtual.mp3"
-    
-    const virtual = document.getElementById ("virtual")
-    virtual.onpointerdown = () => {
-        virtual.src = "icons/9-05.jpg"
-        virtual_sound.play ()
-    }
-
-    const whitenoise_sound = document.createElement ("audio")
-    whitenoise_sound.src = "sounds/whitenoise.mp3"
-    
-    const whitenoise = document.getElementById ("whitenoise")
-    whitenoise.onpointerdown = () => {
-        whitenoise.src = "icons/9-09.jpg"
-        whitenoise_sound.play ()
-    }
-
-    function playSound(str){
+    function playSound(str,id,index){
         var audio = new Audio(str);
         audio.play();
+        var element = document.getElementById(id); 
+        element.src = `images/changed/${ index }.png`;
     }
 </script>
 
+</script>
+
+<div class="row">
+    <div class="image-container"><img id="hide" src="icons/9-02.jpg" height="200" width="200"/></div>
+    <div class="image-container"><img id="glacier"src="icons/9-03.jpg" height="200" width="200"/></div>
+    <div class="image-container"><img id="meditate"src="icons/9-01.jpg" height="200" width="200"/></div>
+</div>
+
+<div class="row">
+    <div class="image-container"><img id="weather"src="icons/9-08.jpg" height="200" width="200"/></div>
+    <div class="image-container"><img id="star"src="icons/9-06.jpg" height="200" width="200"/></div>
+    <div class="image-container"><img id="boardgame"src="icons/9-07.jpg" height="200" width="200"/></div>
+    </div>
+
+<div class="row">
+    <div class="image-container"><img id="bird"src="icons/9-04.jpg" height="200" width="200"/></div>
+    <div class="image-container"><img id="virtual"src="icons/9-05.jpg" height="200" width="200"/></div>
+    <div class="image-container"><id="9" img src="icons/9-09.jpg" height="200" width="200" onclick="playSound('sounds/whitenoise.mp3','9','9-08')"/></div>
+</div>
+
+</body>
+
+</html>
