@@ -41,13 +41,23 @@
 </html>
 
 <script>
+
+    document.body.style.backgroundColor = `tomato`
+    // document.body.style.backgroundColor = `hsl(180, 50%, 50%)`
+
+   
+</script>
+
+<script>
     const hide_sound = document.createElement ("audio")
     hide_sound.src = "sounds/hide.mp3"
     
-    const hide = document.getElementById ("hide")
-    hide.onpointerdown = () => {
-        hide.src = "icons/9-02.jpg"
-        hide_sound.play ()
+    const music = document.getElementById ("music")
+    document.getElementById("music").onpointerdown = () => {
+        document.getElementById("music").src = "icons/9-02.jpg"
+    }
+    document.getElementById("music").onpointerdown = () => {
+    hide_sound.play
     }
 
     const glacier_sound = document.createElement ("audio")
@@ -123,3 +133,4 @@
     }
 
 </script>
+
