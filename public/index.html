@@ -38,7 +38,7 @@
         <div class="row">
             <div class="image-container"><img id="bird"src="icons/9-04.jpg" height="200" width="200"/></div>
             <div class="image-container"><img id="virtual"src="icons/9-05.jpg" height="200" width="200"/></div>
-            <div class="image-container"><img src="icons/9-09.jpg" height="200" width="200"/></div>
+            <div class="image-container"><img src="icons/9-09.jpg" height="200" width="200" onclick="playSound('sounds/whitenoise.mp3')"/></div>
         </div>
         
     </body>
@@ -137,5 +137,9 @@ const music = document.getElementById("music")
         whitenoise_sound.play ()
     }
 
+    function playSound(str){
+        var audio = new Audio(str);
+        audio.play();
+    }
 </script>
 
